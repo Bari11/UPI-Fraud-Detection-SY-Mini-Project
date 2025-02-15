@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help - UPI Fraud Detection</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         .help-background {
-        background: url('../static/images/5_UPI-is-your-New-Mobile-Banking-Heres-Why.jpg') no-repeat center center/cover;
+        background: url('{{ url_for("static", filename="images/5_UPI-is-your-New-Mobile-Banking-Heres-Why.jpg") }}') no-repeat center center/cover;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -32,10 +32,9 @@
         <nav>
             <div class="logo">UPI Fraud Prediction</div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="templates/details.html">Detect</a></li>
-                <li><a href="templates/help.html">Help</a></li>
-
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('details') }}">Detect</a></li>
+                <li><a href="{{ url_for('help') }}">Help</a></li>
             </ul>
         </nav>
     </header>
